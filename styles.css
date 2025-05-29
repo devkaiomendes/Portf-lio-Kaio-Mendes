@@ -10,8 +10,11 @@ html {
 }
 
 :root {
-    --primeira: #4f46e5;
-    --secundaria: #7c3aed;
+    --primeira:  #0012b4;
+    --secundaria: #196a7e ;
+     /* --primeira: #4f46e5;
+    --secundaria: #7c3aed; */
+
     --escuro: #0f172a;
     --maisEscuro: #0a0f1c;
     --claro: #e2e8f0;
@@ -76,9 +79,9 @@ body {
 .foto-perfil {
     width: 350px;
     height: 350px;
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 0 20px var(--primeira) /* rgba(79, 70, 229, 0.3) */;
     border-radius: 50%;
-    border: 4px solid var(--vidro);
+    border: 2px solid var(--vidro);
     animation: flutuar 3s ease-in-out infinite;
 }
 
@@ -255,3 +258,106 @@ h1 {
         transform: translateY(-20px);
     }
 }
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: row; /* mantém em linha */
+  flex-wrap: wrap; /* permite quebrar linha se necessário */
+  justify-content: center;
+  gap: .2rem; /* espaço entre os itens */
+  }
+
+  .menu-link {
+  font-size: 0.9rem; /* reduz o tamanho da fonte */
+  padding: 0.25rem; /* espaço interno menor */
+}
+
+  .cabecalho {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .foto-perfil {
+    margin: 68px 0 0 0;
+    width: 180px;
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .cabealho-sub-titulo {
+    font-size: 1.2rem;
+  }
+
+  .sobre {
+    padding: 4rem 1rem;
+  }
+
+  .sobre-caixa {
+    /* max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1.5rem; */
+
+    text-align: justify;     /* deixa o texto com margens alinhadas */
+  max-width: 600px;        /* controla o tamanho horizontal */
+  margin: 0 auto;          /* centraliza o bloco */
+  padding: 1.5rem;         /* espaçamento interno */
+  line-height: 1.8;        /* espaçamento entre as linhas */
+  font-size: 1rem;   
+  }
+
+  .sobre-titulo {
+    font-size: 2rem;
+  }
+
+  .sobre-caixa p + p {
+    margin-top: 1rem;
+  }
+
+  .sobre-paragrafo {
+    font-size: 1rem;
+  }
+
+  .projetos {
+    padding: 4rem 1rem;
+  }
+
+  .projetos-caixa {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .projetos-titulo {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .projetos-imagem {
+    height: 180px;
+  }
+
+  .contato {
+    padding: 4rem 1rem;
+  }
+
+  .contatos-titulo {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .formulario-contato {
+    padding: 1.5rem;
+  }
+
+  .campo-form,
+  .botao-form {
+    font-size: 1rem;
+  }
+}
+
+
+
